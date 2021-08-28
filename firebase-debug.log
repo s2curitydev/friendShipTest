@@ -1,0 +1,28 @@
+[debug] [2021-06-07T06:52:20.729Z] ----------------------------------------------------------------------
+[debug] [2021-06-07T06:52:20.731Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Han\Desktop\React\week-1.1\friend-test\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-06-07T06:52:20.731Z] CLI Version:   9.12.1
+[debug] [2021-06-07T06:52:20.731Z] Platform:      win32
+[debug] [2021-06-07T06:52:20.731Z] Node Version:  v14.16.1
+[debug] [2021-06-07T06:52:20.732Z] Time:          Sun Jun 06 2021 23:52:20 GMT-0700 (미 태평양 하계 표준시)
+[debug] [2021-06-07T06:52:20.732Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-06-07T06:52:20.736Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-06-07T06:52:20.737Z] > authorizing via signed-in user (playwithdaddy1004@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Han\Desktop\React\week-1.1\friend-test
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 

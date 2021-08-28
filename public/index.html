@@ -3,7 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+      user-scalable="no"
+    />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
@@ -24,7 +28,13 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>잔망이 우정테스트</title>
+    <meta property="og:title" content="잔망이와 우정테스트" />
+    <meta property="og:description" content="잔망이랑 친해? 그럼 드르와~" />
+    <meta
+      property="og:image"
+      content="{{ url_for('./static', filename='ogimage.png') }}"
+    />
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
