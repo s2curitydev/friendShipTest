@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { addRank, addRankFB } from "./redux/modules/rank";
 import { addUserName } from "./redux/modules/rank";
 
+import './message.scss';
+
 const Message = (props) => {
   const dispatch = useDispatch();
   const name = useSelector((state) => state.quiz.name);
@@ -22,8 +24,8 @@ const Message = (props) => {
   let score = (correct.length / answers.length) * 100;
 
   return (
-    <div className="container">
-      <div className="outter">
+    <div className="messageContainer">
+      <div className="messageOutter">
         <img className="scc-img" src={img} />
         <h1>
           <span>{name}</span>에게 한마디
@@ -41,7 +43,7 @@ const Message = (props) => {
           }}
           placeholder="한 마디 적기"
         />
-        <Button
+        <button
           className="button"
           onClick={() => {
             let rank_info = {
@@ -60,17 +62,10 @@ const Message = (props) => {
           // style={{}}
         >
           남기고 랭킹 보러가기
-        </Button>
+        </button>
       </div>
     </div>
   );
 };
-
-const Button = styled.button`
-padding: "8px 24px",
-backgroundColor: "#dadafc",
-borderRadius: "30px",
-border: "#dadafc",
-`;
 
 export default Message;

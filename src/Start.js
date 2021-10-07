@@ -3,14 +3,16 @@ import img from "./janmang.png";
 import { useDispatch, useSelector } from "react-redux";
 import { addUserName } from "./redux/modules/rank";
 
+import './start.scss';
+
 const Start = (props) => {
   const dispatch = useDispatch();
   const name = useSelector((state) => state.quiz.name);
   const input_text = React.useRef(null);
 
   return (
-    <div className="container">
-      <div className="outter">
+    <div className="startContainer">
+      <div className="startOutter">
         <img className="scc-img" src={img} />
         <h1>
           <span>{name}</span>와 나의 우정점수는?
@@ -34,5 +36,6 @@ const Start = (props) => {
     </div>
   );
 };
+
 
 export default Start;

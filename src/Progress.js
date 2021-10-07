@@ -20,7 +20,8 @@ const Progress = (props) => {
 
 const ProgressBar = styled.div`
   background: #eee;
-  width: 80%;
+  width: 80vw;
+  min-width: auto;
   margin: 20px auto;
   height: 20px;
   border-radius: 50px;

@@ -1,9 +1,9 @@
 import React from "react";
-import styled from "styled-components";
 
-import { useSelector, useDispatch } from "react-redux";
-import { addRank } from "./redux/modules/rank";
+import { useSelector } from "react-redux";
 import SuperDaddy from "./SuperDaddy";
+
+import './score.scss';
 
 const Score = (props) => {
   const name = useSelector((state) => state.quiz.name);
@@ -33,79 +33,25 @@ const Score = (props) => {
   });
 
   return (
-    <ScoreContainer>
-      <Text>
+    <div className="scoreContainer">
+      <div className="textTitle">
         <span>{name}</span>
-        퀴즈에 <br />
-        대한 내 점수는?
-      </Text>
-      <MyScore>
+        퀴즈에 대한 내 점수는?
+      </div>
+      <div className="myScore">
         <span>{score}</span>점<p>{score_text}</p>
-      </MyScore>
+      </div>
       <SuperDaddy />
-      <Button
+      <button
         onClick={() => {
           props.history.push("/message");
         }}
         outlined
       >
         {name}에게 한마디
-      </Button>
-    </ScoreContainer>
+      </button>
+    </div>
   );
 };
-
-const ScoreContainer = styled.div`
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  // margin: 0;
-  position: absolute;
-  top: 30%;
-  overflow: hidden;
-  padding: 16px;
-  box-sizing: border-box;
-  flex-direction: column;
-  jusify-content: center;
-  align-items: center;
-`;
-
-const Text = styled.h1`
-  font-size: 1.5em;
-  margin: 0px;
-  line-height: 1.4;
-  & span {
-    background-color: #fef5d4;
-    padding: 5px 10px;
-    border-radius: 30px;
-  }
-`;
-
-const MyScore = styled.div`
-  text-align: center;
-  & span {
-    background-color: #fef5d4;
-    padding: 5px 10px;
-    border-radius: 30px;
-  }
-  font-weight: 600;
-  font-size: 2em;
-  margin: 24px;
-
-  & > p {
-    margin: 24px 0px;
-    font-size: 16px;
-    font-weight: 400;
-  }
-`;
-
-const Button = styled.button`
-  padding: 8px 24px;
-  background-color: ${(props) => (props.outlined ? "#ffffff" : "#dadafc")};
-  border-radius: 30px;
-  margin: 8px;
-  border: 1px solid #dadafc;
-  width: 80vw;
-`;
 
 export default Score;

@@ -1,11 +1,12 @@
 import React from "react";
-import styled from "styled-components";
 import Score from "./Score";
 import SwipeItem from "./SwipeItem";
 
 import { useSelector, useDispatch } from "react-redux";
 import { addAnswer } from "./redux/modules/quiz";
 import Progress from "./Progress";
+
+import './quiz.scss';
 
 const Quiz = (props) => {
   const dispatch = useDispatch();
@@ -32,82 +33,32 @@ const Quiz = (props) => {
   }
 
   return (
-    <QuizContainer>
+    <div className="quizContainer">
       <Progress />
-      <p>
-        <span>{num + 1}번문제</span>
-      </p>
-
-      {quiz.map((l, idx) => {
-        if (num === idx) {
-          return <Question key={idx}>{l.question}</Question>;
-        }
-      })}
-
-      <AnswerZone>
-        <Answer>{"O "}</Answer>
-        <Answer>{" X"}</Answer>
-      </AnswerZone>
+      <div>
+        <p>
+          <span>{num + 1}번문제</span>
+        </p>
+      </div>
+      <div>
+        {quiz.map((l, idx) => {
+          if (num === idx) {
+            return <h1 className="question" key={idx}>{l.question}</h1>;
+          }
+        })}
+      </div>
+      <div className="answerZone">
+        <div className="answer">{"O "}</div>
+        <div className="answer">{" X"}</div>
+      </div>
 
       {quiz.map((l, idx) => {
         if (idx === num) {
           return <SwipeItem key={idx} onSwipe={onSwipe} />;
         }
       })}
-    </QuizContainer>
+    </div>
   );
 };
-
-const QuizContainer = styled.div`
-  margin-top: 3rem;
-  text-align: center;
-  & > p > span {
-    padding: 8px 16px;
-    background-color: #fef5d4;
-    border-radius: 30px;
-  }
-`;
-
-const Question = styled.h1`
-  font-size: 1.5em;
-`;
-
-const AnswerZone = styled.div`
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-`;
-const Answer = styled.div`
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 10em;
-  font-weight: 500;
-  color: #dadafc77;
-`;
-
-const DragItem = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  & > div {
-    background-color: #ffd6aa;
-    border-radius: 150px;
-  }
-  & img {
-    max-width: 150px;
-  }
-`;
 
 export default Quiz;

@@ -1,27 +1,19 @@
 import React from "react";
 import img from "./superdaddy.JPG";
-import styled from "styled-components";
+
+import './superDaddy.scss';
 
 const SuperDaddy = (props) => {
   return (
-    <imgCss>
-      <h2>슈퍼데디 SuperDaddy는 누구인가...?</h2>
-      <img className="scc-img" src={img} />
-    </imgCss>
+    <div className="superDaddycontainer">
+      <div className="testWrapper">
+        <h2>마인크래프트 좋아해...?</h2>
+      </div>
+      <div className="imgContainer">
+        <img src={img} alt="superdaddy" onClick={()=>window.location.href="https://board.janmang2.com"}/>
+      </div>
+    </div>
   );
 };
-
-const imgCss = styled.div`
-  width: 50%;
-  height: 50px;
-  padding-bottom: 100px;
-  margin: auto;
-  backgroundcolor: red;
-  & h2 {
-    width: 100%;
-    padding-bottom: 100px;
-    alignself: center;
-  }
-`;
 
 export default SuperDaddy;

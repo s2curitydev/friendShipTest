@@ -1,12 +1,14 @@
-.container {
+.appContainer {
   display: flex;
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
+  min-width: 400px;
+  max-width: 500px;
   overflow:hidden;
   padding: 16px;
   box-sizing: border-box;
 }
-
+/* 
 .outter {
   display: flex;
   align-items: center;
@@ -49,7 +51,7 @@
   background-color: #dadafc;
   border-radius: 30px;
   border: #dadafc;
-}
+} */
 
 
 /* .App {
@@ -60,7 +62,7 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+*/
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -89,4 +91,4 @@
   to {
     transform: rotate(360deg);
   }
-} */
+} 

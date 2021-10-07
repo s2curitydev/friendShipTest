@@ -1,0 +1,80 @@
+.rankContainer {
+  width: 100%;
+  padding-bottom: 100px;
+
+  .topbar{
+    top: 5px;
+    left: 0;
+    width: 100vw;
+    min-height: 50px;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+  
+    p {
+      text-align: center;
+    }
+
+    span {
+      border-radius: 30px;
+      background-color: #fef5d4;
+      font-weight: 600;
+      padding: 4px 8px;
+    }
+  }
+
+  .rankWrap {
+    display: flex;
+    text-overflow: ellipsis;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .rankItem{
+    width: 80vw;
+    text-overflow: ellipsis;
+    display: block;
+    margin: 8px auto;
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 8px 16px;
+    align-items: center;
+    background-color: #ffd6aa;
+
+    .rankNum{
+      text-align: center;
+      font-size: 2em;
+      font-weight: 600;
+      padding: 0px 16px 0px 0px;
+      border-right: 1px solid #ddd;
+    }
+
+    .rankUser{
+      padding: 8px 16px;
+      text-align: left;
+      
+      p {
+        margin: 0px 0px 8px 0px;
+
+        .userNameClass{
+          border-bottom: 2px solid #212121;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 90vw;
+        }
+      }
+    }
+  }
+  button{
+    position: fixed;
+    bottom: 5vh;
+    left: 0;
+    padding: 8px 24px;
+    // background-color: ${(props) => (props.outlined ? "#ffffff" : "#dadafc")};
+    background-color: #dadafc;
+    border-radius: 30px;
+    margin: 0px 10vw;
+    border: 1px solid #dadafc;
+    width: 80vw; 
+  }
+}

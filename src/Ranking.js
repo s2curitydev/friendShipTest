@@ -109,8 +109,9 @@ const Topbar = styled.div`
   }
 
   & > p > span {
+    color: white;
     border-radius: 30px;
-    background-color: #fef5d4;
+    background-color: #f0a70b;
     font-weight: 600;
     padding: 4px 8px;
   }
@@ -121,7 +122,6 @@ const RankWrap = styled.div`
   text-overflow: ellipsis;
   flex-direction: column;
   width: 100%;
-  margin-top: 58px;
 `;
 
 const RankItem = styled.div`
@@ -164,7 +164,9 @@ const Button = styled.button`
   bottom: 5vh;
   left: 0;
   padding: 8px 24px;
-  background-color: ${(props) => (props.outlined ? "#ffffff" : "#dadafc")};
+  color: white;
+  font-size: 18px;
+  background-color: ${(props) => (props.outlined ? "#ffffff" : "#f0a70b")};
   border-radius: 30px;
   margin: 0px 10vw;
   border: 1px solid #dadafc;

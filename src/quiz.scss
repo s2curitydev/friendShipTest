@@ -1,0 +1,46 @@
+.quizContainer{
+  width: 100%;
+  margin-top: 3rem;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+
+  p {
+    margin-top: 55px;
+    margin-bottom: 30px;
+  
+    span {
+      padding: 8px 16px;
+      background-color: #f0a70b;
+      color: white;
+      font-size: 18px;
+      border-radius: 30px;
+    }
+  }
+  .question{
+    margin: 10px 5px;
+    font-size: 1.2rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .answerZone{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .answer{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10em;
+    font-weight: 500;
+    color: #dadafc77;
+  }
+}
